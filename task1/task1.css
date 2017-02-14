@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0;}
     html,body{width: 100%;}
     html{font-size: calc(100vw/320)}
-    body{font-size: 16px;max-width: 480px; margin: 0 auto;}
+    body{font-size: 16px;}
 #box-wrapper{width: 100%;}
 .box0{
     display: inline-block;
