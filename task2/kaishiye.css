@@ -1,0 +1,62 @@
+
+body{background-color: #f0f0f0;}
+/*********header*******/
+header{
+    padding-top: 60px;
+    text-align: left;
+}
+.header-img{
+    width: 34px;
+    height: 28px;
+    margin: 16px 20px;
+}
+/*************main*************/
+#main{
+    width: 90%;
+    padding: 0 5% 28px 5%;
+    text-align: center
+}
+.m-last-btn{
+    margin: 27px 0;
+    width: 100%;
+    line-height: 114px;
+    font-size: 32px;
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+}
+.m-last-btn-img{
+    display: inline-block;
+    float: right;
+    margin-top:39px;
+    height: 36px;
+}
+/****************begin-box*************/
+.m-begin-box{
+    width:100%;
+    background-color: #fff;
+}
+.m-begin-h--box{
+    width:100%;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    border-bottom: 1px solid #fbb435;
+}
+.m-begin-h{
+    line-height: 90px;
+    color: #fbb435;
+}
+.m-begin-btn{
+    margin: 28px 0;
+    width: 85%;
+    line-height: 132px;
+    font-size: 32px;
+    color: #fff;
+    background-color: #69d1e9;
+}
+/***************翻页式轮播******/
+.lunbo{width: 100%}
+
+
+
+
+

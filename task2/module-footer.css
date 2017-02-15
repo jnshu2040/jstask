@@ -1,0 +1,10 @@
+/***************footer***************/
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    background-color: #29bde0/*rgba(41 206 240 0.7)*/;
+}
+body{padding-bottom: 128px;}
