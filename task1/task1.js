@@ -47,6 +47,7 @@ function begin() {
 function stop() {
     a=1;
     clearInterval(id);
+    reset()
 }
 
 

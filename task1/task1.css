@@ -1,7 +1,8 @@
 *{margin: 0; padding: 0;}
     html,body{width: 100%;}
     html{font-size: calc(100vw/320)}
-    body{font-size: 16px;}
+    html{font-family: "Microsoft YaHei UI Light", serif;}
+    body{font-size: 24px;}
 #box-wrapper{width: 100%;}
 .box0{
     display: inline-block;
@@ -18,7 +19,16 @@
     text-align: center;
     padding: 16px 15%;
 }
-.btn-1{padding:16px;margin: 16px;}
+.btn-1{
+    padding: 16px 32px;
+    margin: 16px;
+    border-radius: 5px;
+    outline-style: none;
+    font-size: 24px;
+    background: orange;
+    color: #fff;
+    font-family: "Microsoft YaHei UI Light",serif;
+}
 
 
 
