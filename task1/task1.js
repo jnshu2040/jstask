@@ -8,20 +8,17 @@ var wrapper;
 var selectColorR;
 var selectColorG;
 var selectColorB;
+var a;  a=1;
+function reset(){for(var i=0;i<=8;i++) {box0[i].style.background = "orange";}}
 
-function reset(){
-    for(var i=0;i<=8;i++) {box0[i].style.background = "orange";}
-}
-function again(){}
-var a;
 function boxToColor() {
     reset();
-    if (a=!0)
-    {
         var selectBoxNumber1=Math.round(8*Math.random());
         var selectBoxNumber2=Math.round(8*Math.random());
+        while(selectBoxNumber2==selectBoxNumber1){selectBoxNumber2=Math.round(8*Math.random());}
         var selectBoxNumber3=Math.round(8*Math.random());
-
+        while(selectBoxNumber3==selectBoxNumber2||selectBoxNumber3==selectBoxNumber1)
+            {selectBoxNumber3=Math.round(8*Math.random());}
             selectColorR=Math.round(256*Math.random());
             selectColorG=Math.round(256*Math.random());
             selectColorB=Math.round(256*Math.random());
@@ -41,11 +38,16 @@ function boxToColor() {
         box0[selectBoxNumber2].style.background = selectColor2;
         box0[selectBoxNumber3].style.background = selectColor3;
 }
+
+function begin() {
+
+    if(a==1){boxToColor();a=0;id=window.setInterval(boxToColor,800);}
 }
 
-
-
-
+function stop() {
+    a=1;
+    clearInterval(id);
+}
 
 
 

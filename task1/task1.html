@@ -6,7 +6,7 @@
     <title>九宫格</title>
     <link rel="stylesheet" href="task1.css">
 </head>
-<body><div
+<body onload="begin()"><div
         id="box-wrapper"><div
         class="box0">1</div><div
         class="box0">2</div><div
@@ -19,11 +19,10 @@
         class="box0">9</div></div
     >
 <div class="btn-wrapper">
-    <button type="button" class="btn-1" onclick="boxToColor()">开始变颜色</button>
-    <button type="button" class="btn-1" onclick="">停止变颜色</button>
+    <button type="button" class="btn-1" onclick="begin()">开始变颜色</button>
+    <button type="button" class="btn-1" onclick="stop()">停止变颜色</button>
+    <button type="button" class="btn-1" onclick="reset()">重置</button>
 </div>
-
-
 
 
 
