@@ -5,12 +5,13 @@ header{
     max-width: 640px;
     height:.64rem;
     /*padding-top:.63rem;*/
-    line-height: 64px;
+    line-height: .64rem;
     text-align: center;
     font-size: .32rem;
     color: #fff;
     background-color: #29bde0;
     border-bottom: 1px solid #47c6e4;
+    z-index: 1;
 }
 body{padding-top: .64rem;}
 .h-left{
@@ -35,7 +36,10 @@ body{padding-top: .64rem;}
     margin: 0 auto;
     text-align: center;
 }
+.main{
+    width: 6.24rem;
 
+}
 
 
 

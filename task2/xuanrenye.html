@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=0.5
+    minimum-scale=0.5 maximum-scale=1.5 user-scalable=yes">
+    <title>参数设置</title>
+    <link rel="stylesheet" href="normalize.css"><!--重置样式-->
+    <!--<link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="base.css"><!--基础样式，设置html body 字体-->
+    <link rel="stylesheet" href="module-header.css"><!--页眉组件-->
+    <link rel="stylesheet" href="xuanrenye.css"><!--此页布局样式-->
+</head>
+<body>
+<header>
+<!-----header----->
+    <div class="h-left">
+        <span class="back-icon">&#x2329;</span>
+    </div>
+    <div class="h-center">
+        <!--<span>参数设置</span>-->
+    </div>
+    <div class="h-right">
+        <!--<div class="h-right-help"></div>-->
+    </div>
+</header>
+<main>
+    <div class="m-proportion-header">玩家配比</div>
+    <div class="m-proportion-wrapper">
+        <div class="m-proportion">杀手<span id="m-proprotion-killerNumber">2</span>人</div>
+        <div class="m-proportion">平民<span id="m-proprotion-commonPeopleNumber">3</span>人</div>
+    </div>
+
+
+    <div>
+        玩家列表<br>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+            <span class="gamerlist"></span>
+
+    </div>
+
+
+
+
+    <div class="m-proportion-form-wrapper">
+        <form name="form" id="amount" action="#" >
+             请输入玩家数量
+            <input class="m-proportion-input-number" name="gameramount"
+                   type="text" value="8" id="gameramount" placeholder="8"
+                   onfocus="printNumberTime()" onblur="clearPrintNumberTime()"
+            >
+            <span class="m-proportion-form-span">玩家数量为4-18</span>
+            <!--<input class="m-proportion-submit" type="submit" value="" ></input>-->
+        </form>
+    </div>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<script href="../bootstrap-3.3.0/js/bootstrap.min.js"></script>-->
+<!--<script href="../bootstrap-3.3.0/js/jquery-3.1.1.min.js"></script>-->
+<script src="base.js"></script>
+<script src="xuanrenye.js"></script>
+</body>
+</html>
