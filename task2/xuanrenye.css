@@ -50,14 +50,35 @@ body{
 .gamerlist{
     color: #951;
     display: inline-block;
-    width: 40%;
-    line-height: .90rem;
+    width: 45%;
+    line-height: .60rem;
+    font-size: .32rem;
     text-align: center;
     height: auto;
 
 }
-
-
-
+.m-proportion-p{text-align: right}
+.m-proportion-btn{
+    margin: 0 .48rem;
+    text-align: center;
+    font-size: .36rem;
+    color: #444;
+    font-family: "Hiragino Sans GB W3", "微软雅黑", sans-serif;
+    line-height: .48rem;
+}
+footer{
+    background: #f0f0f0;
+}
+.f-begin-game{
+    margin: 0 auto;
+    margin-bottom: .16rem;
+    width: 6.00rem;
+    height: .90rem;
+    font-size: .64rem;
+    line-height: .90rem;
+    color: #fff;
+    background: orange;
+}
+body{padding-bottom: 1.28rem;}
 
 

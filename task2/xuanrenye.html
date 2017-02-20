@@ -10,6 +10,7 @@
     <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="base.css"><!--基础样式，设置html body 字体-->
     <link rel="stylesheet" href="module-header.css"><!--页眉组件-->
+    <link rel="stylesheet" href="module-footer.css"><!--页脚-->
     <link rel="stylesheet" href="xuanrenye.css"><!--此页布局样式-->
 </head>
 <body>
@@ -28,50 +29,40 @@
 <main>
     <div class="m-proportion-header">玩家配比</div>
     <div class="m-proportion-wrapper">
-        <div class="m-proportion">杀手<span id="m-proprotion-killerNumber">2</span>人</div>
-        <div class="m-proportion">平民<span id="m-proprotion-commonPeopleNumber">3</span>人</div>
+        <div class="m-proportion">杀手<span id="m-proprotion-killerNumber">--</span>人</div>
+        <div class="m-proportion">平民<span id="m-proprotion-commonPeopleNumber">--</span>人</div>
     </div>
 
 
     <div>
         玩家列表<br>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-            <span class="gamerlist"></span>
-
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
+        <span class="gamerlist"></span> <span class="gamerlist"></span>
     </div>
-
-
 
 
     <div class="m-proportion-form-wrapper">
-        <form name="form" id="amount" action="#" >
+        <form name="form" id="amount" action="#" onkeydown="if(event.keyCode==13)return false;">
              请输入玩家数量
             <input class="m-proportion-input-number" name="gameramount"
-                   type="text" value="8" id="gameramount" placeholder="8"
-                   onfocus="printNumberTime()" onblur="clearPrintNumberTime()"
+                   type="text" value="" placeholder="8"
+                   id="gameramount"
+                   onfocus="printNumberTime()"
+                   onblur="clearPrintNumberTime()"
             >
             <span class="m-proportion-form-span">玩家数量为4-18</span>
-            <!--<input class="m-proportion-submit" type="submit" value="" ></input>-->
+
         </form>
     </div>
 
-
+    <p class="m-proportion-p"><button  class="m-proportion-btn"  onclick="writeGamerIn()">重新分配</button></p>
 
 
 
@@ -81,7 +72,12 @@
 
 
 
+<footer>
+    <div class="f-begin-game">
+        去发牌
+    </div>
 
+</footer>
 
 
 

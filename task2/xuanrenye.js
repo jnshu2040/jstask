@@ -11,7 +11,29 @@ killerAmount=Math.floor(gamerAmount/3.5);
 var commonPeopleAmount;
 commonPeopleAmount=gamerAmount-killerAmount;
 
-function printNumber() {//获取输入框数量
+
+var numberOk; numberOk=true;
+function checkInput() {//检查文本框
+    var x=Number(gamerAmount);
+    numberOk=true;
+    if(isNaN(x)){
+        alert("请输入数字");
+        document.getElementById("gameramount").value=" ";
+        numberOk=false;
+        return numberOk;
+    }
+    else {
+        if (gamerAmount<4||gamerAmount>18){
+        alert("支持游戏人数为：4-18人。");
+        document.getElementById("gameramount").value=" ";
+        numberOk=false;
+        return numberOk;
+         }
+    }
+}
+
+
+function printNumber() {//获取杀手和平民人数DOM并写入。
     gamerAmount=document.getElementById("gameramount").value;
     killerAmount=Math.floor(gamerAmount/3.5);
     commonPeopleAmount=gamerAmount-killerAmount;
@@ -43,8 +65,9 @@ function resetGamer(){
     for(i=1;i<=gamerAmount;i++){
         gamer[i]="平民";
     }
-}
-resetGamer();
+}resetGamer();
+
+
 function assignKillerToGamer() {//为游戏者随机分配杀手
     resetGamer();
         var a=1;
@@ -53,15 +76,17 @@ function assignKillerToGamer() {//为游戏者随机分配杀手
             if(gamer[n]=="平民"){gamer[n]="杀手";a++;}
 }}
 
+var gamerList=document.getElementsByClassName("gamerlist");
+function resetList() {for(i=0;i<18;i++){gamerList[i].innerHTML="";}}
 
-function writeGamerIn() {
+function writeGamerIn() {//重置列表，检查输入，排列身份，写入。
+    resetList();
     assignKillerToGamer();
-    var i=0;
-    var gamerList;
-    gamerList=document.getElementsByClassName("gamerlist");
-    // for(i=0;i<=18;i++){gamerList[i].innerHTML="";}
-    for(i=0;i<gamerAmount;i++){
-        gamerList[i].innerHTML="玩家"+(i+1)+"  :  "+gamer[i+1];
+    checkInput();
+    if(numberOk==true){
+        for(i=0;i<gamerAmount;i++){
+            gamerList[i].innerHTML="玩家"+(i+1)+"  :  "+gamer[i+1];
+        }
     }
 }
 
@@ -72,6 +97,24 @@ function clearPrintNumberTime() {
     clearInterval(id);
     writeGamerIn();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
