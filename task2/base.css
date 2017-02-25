@@ -39,14 +39,20 @@ html,header,footer{max-width: 640px; min-width: 300px;margin: 0 auto;}
     transform: rotateX(60deg);
     -webkit-transform: rotateX(60deg);
     font-size: .64rem;
-    margin: 0 -0.24rem;
+    /*margin: 0 -0.24rem;*/
     /*position: relative;*/
     /*left: -.24rem;*/
 }
-
-main{
-    width: 100%;
+.close-icon{
+    display: inline-block;
+    /*content:"&#x2715;"*/
+    font-size: .42rem;
+    line-height: .64rem;
 }
+/*main{*/
+    /*width: 100%;*/
+    /*background: #29bde0;*/
+/*}*/
 
 
 

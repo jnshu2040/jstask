@@ -70,6 +70,7 @@ footer{
     background: #f0f0f0;
 }
 .f-begin-game{
+    display: block;
     margin: 0 auto;
     margin-bottom: .16rem;
     width: 6.00rem;

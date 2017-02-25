@@ -20,6 +20,7 @@ body{padding-top: .64rem;}
     top: 0;
     width: 15%;
     height: .64rem;
+    padding-left: .08rem;
     text-align: left;
 }
 .h-right{
@@ -28,9 +29,11 @@ body{padding-top: .64rem;}
     top: 0;
     width: 15%;
     height: .64rem;
+    padding-right: .08rem;
     text-align: right;
 }
 .h-center{
+    display: block;
     width: 40%;
     height: .64rem;
     margin: 0 auto;
@@ -38,7 +41,6 @@ body{padding-top: .64rem;}
 }
 .main{
     width: 6.24rem;
-
 }
 
 

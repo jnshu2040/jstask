@@ -14,29 +14,29 @@
 #main{width: 100%;}
 .m-tips-box{
     width:100%;
-    line-height: 80px;
+    line-height: .80rem;
     background-color:#b9e9f5;
 }
 .m-tips-span{
-    padding:0 0 0 60px;
+    padding:0 0 0 .60rem;
 }
 .m-tips-audio--img{
     float: right;
-    height:60px;
-    width:60px;
-    margin: 10px 10px 0 0;
+    height:.60rem;
+    width:.60rem;
+    margin: .10rem .10rem 0 0;
 }
 .m-intro-box{
-    line-height: 60px;
+    line-height: .60rem;
 }
 .m-intro-span{
     color: #fff;
-    padding-left: 80px;
+    padding-left: .80rem;
 }
 /*************select-box*************/
 .m-select-box-group{
     width: 98%;
-    /*height: 680px;*/
+    /*height: 6.80rem;*/
     margin: 0 auto;
     /*overflow: scroll;*/
 }
@@ -45,34 +45,34 @@
     width: 33%;
 }
 .m-select-person-box{
-    height: 126px;
-    width: 126px;
+    height: 1.26rem;
+    width: 1.26rem;
     margin: 0 auto;
-    border: 5px solid #fff;
+    border: .05rem solid #fff;
 }
 .m-select-person-name{
-    line-height: 99px;
+    line-height: .99rem;
     background-color:#f5c97b;
     text-align: center;
-    font-size: 26px;
+    font-size: .26rem;
 }
 .m-select-person-number{
-    line-height: 27px;
+    line-height: .27rem;
     background-color:#83b09a;
     text-align: center;
-    font-size: 20px;
+    font-size: .20rem;
 }
 .m-select-role-box{
-    width: 140px;
+    width: 1.40rem;
     height: auto;
-    margin: 20px auto;
+    margin: .20rem auto;
     position: relative;
-    left: 2px;
+    left: .02rem;
 }
 .m-select-role-box img{
-    margin-right: 5px;
-    height: 30px;
-    width: 30px;
+    margin-right: .05rem;
+    height: .30rem;
+    width: .30rem;
 }
 .m-select-role-box{
     opacity: 0;
@@ -85,11 +85,11 @@
 .f-btn{
     display:block;
     width:70%;
-    height: 80px;
-    margin: 40px auto 60px auto ;
+    height: .80rem;
+    margin: .40rem auto .60rem auto ;
     background-color:gold;
 }
-body{padding-bottom: 180px;}
+body{padding-bottom: 1.80rem;}
 
 
 

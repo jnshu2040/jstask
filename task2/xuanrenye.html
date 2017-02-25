@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=0.5
+    <meta name="viewport" content="width=device-width initial-scale=1.0
     minimum-scale=0.5 maximum-scale=1.5 user-scalable=yes">
     <title>参数设置</title>
     <link rel="stylesheet" href="normalize.css"><!--重置样式-->
@@ -52,9 +52,9 @@
         <form name="form" id="amount" action="#" onkeydown="if(event.keyCode==13)return false;">
              请输入玩家数量
             <input class="m-proportion-input-number" name="gameramount"
-                   type="text" value="" placeholder="8"
+                   type="text" value="4" placeholder="8"
                    id="gameramount"
-                   onfocus="printNumberTime()"
+                   onchange="printNumberTime()"
                    onblur="clearPrintNumberTime()"
             >
             <span class="m-proportion-form-span">玩家数量为4-18</span>
@@ -72,7 +72,7 @@
 
 
 <footer>
-    <div class="f-begin-game">
+    <div class="f-begin-game" onclick="toChuanDiYe()">
         去发牌
     </div>
 

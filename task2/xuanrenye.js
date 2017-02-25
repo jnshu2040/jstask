@@ -4,6 +4,8 @@
 
 var gamerAmount;
 gamerAmount=document.getElementById("gameramount").value;
+var gamerAmountDom=document.getElementById("gameramount");
+
 
 var killerAmount;
 killerAmount=Math.floor(gamerAmount/3.5);
@@ -43,12 +45,11 @@ var inputCommonPeopleNumber= document.getElementById("m-proprotion-commonPeopleN
     inputKillerNumber.innerHTML=killerAmount;
     inputCommonPeopleNumber.innerHTML=commonPeopleAmount;
 }
-
-
-
+printNumber();
 
 var gamerIdentity = new Array(gamerAmount);
 var gamer         = new Array(gamerAmount);
+console.log(gamer);
 function assignIdentity() {//顺序分配身份
     var i=1;
     for (i=1;i<=killerAmount;i++){
@@ -63,7 +64,7 @@ assignIdentity();
 function resetGamer(){
     var i=1;
     for(i=1;i<=gamerAmount;i++){
-        gamer[i]="平民";
+        gamer[i-1]="平民";
     }
 }resetGamer();
 
@@ -83,18 +84,28 @@ function writeGamerIn() {//重置列表，检查输入，排列身份，写入�
     resetList();
     assignKillerToGamer();
     checkInput();
+    printNumber();
     if(numberOk==true){
         for(i=0;i<gamerAmount;i++){
-            gamerList[i].innerHTML="玩家"+(i+1)+"  :  "+gamer[i+1];
+            gamerList[i].innerHTML="玩家"+(i+1)+"  :  "+gamer[i];
         }
     }
+    console.log(gamer);
+    localStorage.gamerListStorage=gamer;
+    console.log(gamer);
+    console.log(localStorage.gamerListStorage);
 }
+
+
+
+
 
 function printNumberTime() {
     id=window.setInterval(printNumber,300);
+    printNumber();
 }
 function clearPrintNumberTime() {
-    clearInterval(id);
+    // clearInterval(id);
     writeGamerIn();
 }
 
@@ -103,6 +114,31 @@ function clearPrintNumberTime() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toChuanDiYe() {
+    // whiteLocalStorage();
+    location.href="shuandi.html";
+}
+// document.getElementById(fBeginButton).addEventListener("click",toChuanDiYe());
+
+
+// function shiyan() {
+//     a=1;return a;
+// }
+// shiyan();
 
 
 

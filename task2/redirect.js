@@ -14,7 +14,9 @@ function selectPeoplePage(){
     window.location.href="xuanrenye.html"
 }
 //
-
+function chuandiPage() {//传递页
+    window.location.href="shuandi.html"
+}
 
 
 
