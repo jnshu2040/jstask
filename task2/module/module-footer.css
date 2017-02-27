@@ -17,6 +17,32 @@ body{padding-bottom: 1.28rem;}
     background: #fbb435;
     color: #fff;
 }
+.f-btn-left{
+    float: left;
+    width: 2.25rem;
+    margin-left: .5rem;
+    margin-top: .20rem;
+    line-height: .86rem;
+    background: #fbb435;
+    color: #fff;
+    border-radius: .05rem;
+}
+.f-btn-right{
+    float: right;
+    width: 2.25rem;
+    margin-right: .5rem;
+    margin-top: .20rem;
+    line-height: .86rem;
+    background: #fbb435;
+    color: #fff;
+    border-radius: .05rem;
+}
+
+
+
+
+
+
 
 
 
