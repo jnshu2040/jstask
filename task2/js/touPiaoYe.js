@@ -31,7 +31,7 @@ for(i=0;i<gamerAmount;i++){//写卡牌/初始化卡牌
     creatGamer();
 }
 function goTo() {
-    location.href="../faGuanRiJi.html";
+    location.href="../faGuanTaiBen.html";
 }
 $(".f-btn-small").bind("click",goTo);
 
