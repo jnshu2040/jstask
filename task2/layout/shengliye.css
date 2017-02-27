@@ -1,0 +1,97 @@
+/***********header*********/
+body{
+    padding-top: 129px;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    padding-top:64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    border-bottom: 1px solid #74d4eb;
+    background-color: #29bde0;
+}
+.h-home--png{
+    float: left;
+    margin-left: 20px;
+    height: 40px;
+}
+.h-notice--png{
+    float: right;
+    margin-right: 20px;
+    height: 40px;
+}
+/*************main**********/
+#main{
+    width: 100%;
+    line-height: 36px;
+}
+/***********count**********/
+.m-count--box{
+    margin: 20px auto;
+    width: 80%;
+    background: url(../pic/winner.png)no-repeat top;
+}
+.m-count-notice--p{
+    padding-top: 220px;
+    margin-bottom: 40px;
+    line-height: 40px;
+    font-size: 32px;
+    color: #ffc865;
+}
+.m-count-tab{
+    color: #fff;
+    line-height: 36px;
+}
+.m-count-tab td{width: 37%}
+.m-detail-box{
+    padding: 0 10% 20px 10%;
+    width: 80%;
+    color: #888;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.m-detail-h3{
+    color: #000;
+    line-height: 50px;
+    padding-bottom: 9px;
+}
+.m-detail-time{
+    display: block;
+    float: right;
+    line-height: 58px;
+    font-size: 18px;
+}
+/***************footer***************/
+footer{
+    padding: 23px 0 20px 0;
+}
+body{padding-bottom: 128px;}
+.f-again-box{
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    line-height: 85px;
+    font-size: 36px;
+    color: #fff;
+    background-color: #f66f6f;
+    border-radius: 5px;
+}
+.f-share-box{
+     float: right;
+     width: 40%;
+    margin-right: 5%;
+     line-height: 85px;
+     font-size: 36px;
+     color: #fff;
+     background-color: #fbb435;
+     border-radius: 5px;
+ }
+
+
+

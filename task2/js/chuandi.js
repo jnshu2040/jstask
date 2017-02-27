@@ -71,7 +71,7 @@ function clickToChange(){//点击事件/点击数？/最后？/奇偶数？/写�
             else{coverIdentity()}
         }
     }
-    else{location.href="toupiaoye.html"}
+    else{location.href="TouPiaoYe.html"}
 }
 
 
