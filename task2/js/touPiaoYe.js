@@ -27,13 +27,59 @@ function creatGamer() {//写卡牌的函数
     );
 }
 
-for(i=0;i<gamerAmount;i++){//写卡牌/初始化卡牌
+for(var i=0;i<gamerAmount;i++){//初始化卡牌身份，写入
     creatGamer();
 }
-function goTo() {
-    location.href="../faGuanTaiBen.html";
+function goTo() {//定义点击事件
+    location.href="faGuanTaiBen.html";
 }
-$(".f-btn-small").bind("click",goTo);
+$(".f-btn-small").bind("click",goTo);//绑定事件
+
+
+
+//定义一个有限状态机，
+//两种状态：生存，死亡，currentState
+//对象：玩家数组的每个单位,singleGamer
+//事件：被杀死/被投死/杀某人/投票给某人
+
+// var singleGamer ={
+//     currentState: "alive",//当前状态,
+//     initialize: function(){//初始化,执行函数回掉
+//         var self=this;
+//         self.on("hover",self.transition);//绑定事件
+//     },
+//     transition: function(event){
+//         switch(this.currentState){//switch选择执行
+//             case "alive":
+//                 this.currentState = "dead";
+//                 beKilled;
+//                 break;
+//             case "dead":
+//                 this.currentState = "alive";
+//                 doSomething();
+//                 break;
+//             default:
+//                 console.log()
+//         }
+//     }
+// };
+//
+// if(singleGamer.currentState=="alive"){}
+// if(singleGamer.currentState=="dead"){}
+
+var singleGamer ={
+    currentState: "alive"
+}
+
+
+function killSomeOne() {
+    singleGamer.currentState= "dead";
+}
+
+
+
+
+
 
 
 

@@ -1,7 +1,20 @@
 body{background: #f0f0f0;}
-
-
-
+.m-process-wrapper{
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+}
+.m-process-day{
+    margin: .16rem 0;
+    line-height: .80rem;
+    color: #29bde0;
+    background: #fff;
+    border: .02rem solid #e0e0e0;
+}
+.m-process-detail-wrapper{
+    background: #fff;
+    border: .02rem solid #e0e0e0;
+}
 
 
 

@@ -91,7 +91,7 @@ function writeGamerIn() {//重置列表，检查输入，排列身份，写入�
         }
     }
     console.log(gamer);
-    localStorage.gamerListStorage=gamer;
+    localStorage.gamerListStorage=gamer;//列表写入本地存储
     console.log(gamer);
     console.log(localStorage.gamerListStorage);
 }
