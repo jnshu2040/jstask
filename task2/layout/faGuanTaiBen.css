@@ -6,16 +6,21 @@ body{background: #f0f0f0;}
 }
 .m-process-day{
     margin: .16rem 0;
-    line-height: .80rem;
+    line-height: .60rem;
     color: #29bde0;
     background: #fff;
-    border: .02rem solid #e0e0e0;
+    border-bottom: .02rem solid #e0e0e0;
 }
 .m-process-detail-wrapper{
     background: #fff;
     border: .02rem solid #e0e0e0;
 }
-
+.m-process-detail{
+    background: #29bde0;
+    color: #fff;
+    line-height: .60rem;
+    margin: .08rem 0;
+}
 
 
 

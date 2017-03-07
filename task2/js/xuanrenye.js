@@ -111,26 +111,11 @@ function clearPrintNumberTime() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+localStorage.dayNumberStorage=1;
 
 function toChuanDiYe() {
     // whiteLocalStorage();
-    location.href="../chuandi.html";
+    location.href="chuandi.html";
 }
 // document.getElementById(fBeginButton).addEventListener("click",toChuanDiYe());
 
