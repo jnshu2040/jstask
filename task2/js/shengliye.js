@@ -6,7 +6,7 @@ var winner=localStorage.winner;
 var gamerAmount=gamerObj.length;
 //写胜利玩家
 function writeWinner(){
-    if(winner="killer"){$("#winnerDom").html("杀手胜利")}
+    if(winner=="killer"){$("#winnerDom").html("杀手胜利")}
     else{$("#winnerDom").html("平民胜利")}
 }
 writeWinner();//谁胜利，写入
