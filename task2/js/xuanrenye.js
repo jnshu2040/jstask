@@ -25,8 +25,8 @@ function checkInput() {//检查文本框
         return numberOk;
     }
     else {
-        if (gamerAmount<4||gamerAmount>18){
-        alert("支持游戏人数为：4-18人。");
+        if (gamerAmount<6||gamerAmount>18){
+        alert("支持游戏人数为：6-18人。");
         document.getElementById("gameramount").value=" ";
         numberOk=false;
         return numberOk;
