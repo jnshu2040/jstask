@@ -2,9 +2,28 @@
  * Created by 1 on 2017/3/10.
  */
 var gamerObj=JSON.parse(localStorage.gamerObjStorage);
-// var winner=localStorage.winner;
+var winner=localStorage.winner;
 var gamerAmount=gamerObj.length;
+//写胜利玩家
+function writeWinner(){
+    if(winner="killer"){$("#winnerDom").html("杀手胜利")}
+    else{$("#winnerDom").html("平民胜利")}
+}
+writeWinner();//谁胜利，写入
+//计算角色玩家数量
+var killerAmount=0;
+var commonPeopleAmount=0;
+for(var i=0;i<gamerAmount;i++){
+    if(gamerObj[i].identity=="杀手"){killerAmount++}
+    else{commonPeopleAmount++}
+}
 
+
+function writeAmount() {
+    $("#killerAmountDom").html(killerAmount);
+    $("#commonPeopleAmountDom").html(commonPeopleAmount);
+}
+writeAmount();
 function createList(n,a,b){
     $("#main").append(
         "<div class='m-detail-box'>" +
