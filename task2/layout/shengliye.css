@@ -62,30 +62,7 @@
     font-size: .18rem;
 }
 /***************footer***************/
-footer{
-    padding: .23rem 0 .20rem 0;
-}
-body{padding-bottom: 1.28rem;}
-.f-again-box{
-    float: left;
-    width: 40%;
-    margin-left: 5%;
-    line-height: .85rem;
-    font-size: .36rem;
-    color: #fff;
-    background-color: #f66f6f;
-    border-radius: .05rem;
-}
-.f-share-box{
-     float: right;
-     width: 40%;
-    margin-right: 5%;
-     line-height: .85rem;
-     font-size: .36rem;
-     color: #fff;
-     background-color: #fbb435;
-     border-radius: .5rem;
- }
+
 
 
 
