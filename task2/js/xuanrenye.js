@@ -8,7 +8,7 @@ var gamerAmountDom=document.getElementById("gameramount");
 
 
 var killerAmount;
-killerAmount=Math.floor(gamerAmount/3.5);
+killerAmount=Math.floor(gamerAmount/4);
 
 var commonPeopleAmount;
 commonPeopleAmount=gamerAmount-killerAmount;
