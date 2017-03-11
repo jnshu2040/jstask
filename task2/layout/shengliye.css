@@ -1,96 +1,83 @@
 /***********header*********/
-body{
-    padding-top: 129px;
-}
-header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 640px;
-    padding-top:64px;
-    line-height: 64px;
-    text-align: center;
-    font-size: 32px;
-    color: #fff;
-    border-bottom: 1px solid #74d4eb;
-    background-color: #29bde0;
-}
+
+
 .h-home--png{
     float: left;
-    margin-left: 20px;
-    height: 40px;
+    margin-left: .20rem;
+    height: .40rem;
 }
 .h-notice--png{
     float: right;
-    margin-right: 20px;
-    height: 40px;
+    margin-right: .20rem;
+    height: .40rem;
 }
 /*************main**********/
 #main{
     width: 100%;
-    line-height: 36px;
+    line-height: .36rem;
 }
 /***********count**********/
 .m-count--box{
-    margin: 20px auto;
+    margin: .20rem auto;
     width: 80%;
     background: url(../pic/winner.png)no-repeat top;
+    background-size: 3.51rem 2.05rem;
 }
 .m-count-notice--p{
-    padding-top: 220px;
-    margin-bottom: 40px;
-    line-height: 40px;
-    font-size: 32px;
+    padding-top: 2.20rem;
+    margin-bottom: .40rem;
+    line-height: .40rem;
+    font-size: .32rem;
     color: #ffc865;
 }
 .m-count-tab{
     color: #fff;
-    line-height: 36px;
+    line-height: .36rem;
 }
 .m-count-tab td{width: 37%}
 .m-detail-box{
-    padding: 0 10% 20px 10%;
+    padding: 0 10% .20rem 10%;
     width: 80%;
     color: #888;
     background: #fff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: .01rem solid #ddd;
+    border-bottom: .01rem solid #ddd;
 }
 .m-detail-h3{
     color: #000;
-    line-height: 50px;
-    padding-bottom: 9px;
+    line-height: .50rem;
+    padding-bottom: .09rem;
 }
 .m-detail-time{
     display: block;
     float: right;
-    line-height: 58px;
-    font-size: 18px;
+    line-height: .58rem;
+    font-size: .18rem;
 }
 /***************footer***************/
 footer{
-    padding: 23px 0 20px 0;
+    padding: .23rem 0 .20rem 0;
 }
-body{padding-bottom: 128px;}
+body{padding-bottom: 1.28rem;}
 .f-again-box{
     float: left;
     width: 40%;
     margin-left: 5%;
-    line-height: 85px;
-    font-size: 36px;
+    line-height: .85rem;
+    font-size: .36rem;
     color: #fff;
     background-color: #f66f6f;
-    border-radius: 5px;
+    border-radius: .05rem;
 }
 .f-share-box{
      float: right;
      width: 40%;
     margin-right: 5%;
-     line-height: 85px;
-     font-size: 36px;
+     line-height: .85rem;
+     font-size: .36rem;
      color: #fff;
      background-color: #fbb435;
-     border-radius: 5px;
+     border-radius: .5rem;
  }
 
 

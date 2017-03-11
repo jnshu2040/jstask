@@ -1,13 +1,10 @@
 /**
  * Created by 1 on 2017/2/27.
  */
-var gamerString;
-var gamer=[];
-var gamerObj=[];
-gamerString=localStorage.gamerListStorage;
-gamer=gamerString.split(",");//获取数组
+var gamerString=localStorage.gamerListStorage;
+var gamer=gamerString.split(",");//获取数组
 var gamerAmount=gamer.length;//获取数组长度
-
+var gamerObj=JSON.parse(localStorage.gamerObjStorage);
 
 
 $(".m-process-wrapper").append(
@@ -19,41 +16,25 @@ $(".m-process-wrapper").append(
     "<div class='m-process-detail'>投票</div> </div>"
 );
 
-
-
-
-//玩家状态工厂函数
-function setGamer(number,identity,state) {
-    var a={
-        number : number,
-        identity : identity,
-        state : state
-    };
-    return a;
-}//示例：gamerObj[1]=setGamer(1,gamer[1],"alive");
-//示例：转换成json格式的字符串,并存储：localStorage.gamerObjStorage=json.stringify(gamerObj)
-
-//遍历得到每个玩家详情,
-for(var i=0;i<gamerAmount;i++){
-    gamerObj[i]=setGamer(i+1,gamer[1],"alive");
-}
-console.log("gamerObj");console.log(gamerObj);
-//转换为JSON格式并写入本地存储
-localStorage.gamerObjStorage=JSON.stringify(gamerObj);
-console.log("localStorage.gamerObjStorage");console.log(localStorage.gamerObjStorage);
 //第几天/写入文档
 $(".m-process-day").html("第"+localStorage.dayNumberStorage+"天");
 
-//点击事件/杀手杀人/投票杀人
+//点击事件/杀手杀人/投票杀人，页面跳转
 var processList=$(".m-process-detail");
 console.log(processList[0]);
 function toKillerPage() {
-    localStorage.pageType="killerPage";
-    location.href="TouPiaoYe.html";
+    if(localStorage.time=="night"){
+        localStorage.pageType="killerPage";
+        location.href="TouPiaoYe.html";
+    }
+    else{alert("现在是白天")}
 }
 function toVotePage() {
-    localStorage.pageType="votePage";
-    location.href="TouPiaoYe.html";
+    if(localStorage.time=="day"){
+        localStorage.pageType="votePage";
+        location.href="TouPiaoYe.html";
+    }
+    else{alert("现在是晚上")}
 }
 $(processList[0]).on("click",toKillerPage);
 $(processList[3]).on("click" ,toVotePage);

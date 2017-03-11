@@ -71,7 +71,10 @@ function clickToChange(){//点击事件/点击数？/最后？/奇偶数？/写�
             else{coverIdentity()}
         }
     }
-    else{location.href="TouPiaoYe.html"}
+    else{
+        localStorage.pageType="list";
+        localStorage.dayNumberStorage="1";
+        location.href="TouPiaoYe.html"}
 }
 
 

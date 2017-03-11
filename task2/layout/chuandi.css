@@ -13,7 +13,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: #fff url(pic/sprite.png) 0 -4.2rem ;
+    background: #fff url(../pic/sprite.png) 0 -4.2rem ;
     background-size: 7.2rem 7.2rem;
     border: .01rem solid #fff;
 }
@@ -47,7 +47,7 @@
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-    background: #fbb435 url(pic/sprite.png) -3.01rem -4.98rem ;
+    background: #fbb435 url(../pic/sprite.png) -3.01rem -4.98rem ;
     background-size: 7.2rem 7.2rem;
 }
 .m-gamer-identify{

@@ -78,7 +78,7 @@ function assignKillerToGamer() {//为游戏者随机分配杀手
 }}
 
 var gamerList=document.getElementsByClassName("gamerlist");
-function resetList() {for(i=0;i<18;i++){gamerList[i].innerHTML="";}}
+function resetList() {for(var i=0;i<18;i++){gamerList[i].innerHTML="";}}
 
 function writeGamerIn() {//重置列表，检查输入，排列身份，写入。
     resetList();
@@ -86,7 +86,7 @@ function writeGamerIn() {//重置列表，检查输入，排列身份，写入�
     checkInput();
     printNumber();
     if(numberOk==true){
-        for(i=0;i<gamerAmount;i++){
+        for(var i=0;i<gamerAmount;i++){
             gamerList[i].innerHTML="玩家"+(i+1)+"  :  "+gamer[i];
         }
     }
@@ -111,10 +111,11 @@ function clearPrintNumberTime() {
 
 
 
-localStorage.dayNumberStorage=1;
+
 
 function toChuanDiYe() {
     // whiteLocalStorage();
+    localStorage.dayNumberStorage="1";
     location.href="chuandi.html";
 }
 // document.getElementById(fBeginButton).addEventListener("click",toChuanDiYe());
