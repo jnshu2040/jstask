@@ -6,7 +6,7 @@ html{
 }
 body{
     width: 100%;
-    background: rgba(0,0,0,0.4) url(img/background.png) 0 0 ;
+    background: rgba(0,0,0,0.4) url(../img/background.png) 0 0 ;
 }
 main{
     display: flex;
@@ -40,11 +40,11 @@ main{
 }
 .login-m-user{
     padding-left: 70px;
-    background: #fff url(img/user.png) no-repeat 16px 50%;
+    background: #fff url(../img/user.png) no-repeat 16px 50%;
 }
 .login-m-pwd{
     padding-left: 70px;
-    background: #fff url(img/pwd.png) no-repeat 16px 50%;
+    background: #fff url(../img/pwd.png) no-repeat 16px 50%;
     margin-top: 20px;
 }
 .login-m-tip{

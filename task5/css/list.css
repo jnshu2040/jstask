@@ -1,0 +1,36 @@
+.listPage-wrapper{
+    border: 1px solid #03a9f4;
+    padding: 0 15px;
+}
+.listPage-header{
+    padding: 0 15px;
+    line-height: 48px;
+    color: #fff;
+    background: #03a9f4;
+}
+.listPage-search-wrapper{
+    line-height: 48px;
+    padding: 0 32px;
+}
+.listPage-detail-wrapper{
+    border: 1px solid #bbb;
+    /*margin: 0 15px;*/
+    padding: 0 15px;
+}
+.listPage-detail-header{
+    padding: 0 15px;
+    margin: 0 -15px;
+line-height: 48px;
+color: #fff;
+background: #03a9f4;
+}
+.listPage-detail-header-btn{
+}
+.listPage-detail-list-header{
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+
