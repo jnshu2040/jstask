@@ -1,1 +1,59 @@
-*{color: #fff;}
+.addNew-wrapper{
+    border: 1px solid #03a9f4;
+}
+.addNew-header{
+    line-height: 48px;
+    background: #03a9f4;
+}
+.addNew-list-wrapper{
+    font-weight: bolder;
+}
+.addNew-list-header{
+    text-align: right;
+    line-height: 48px;
+}
+.addNew-list{
+    line-height: 48px;
+}
+.addNew-list input{
+    display: inline-block;
+    line-height: 48px;
+    height: 32px;
+    margin: 8px;
+}
+.addNew-list label input{
+    vertical-align: middle;
+}
+.addNew-list-joinTime{
+}
+.textarea{
+    display: block;
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+.bottom-1{
+    height:60px;
+}
+.addNew-form-alert{
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+}
+.addNew-confirm-btn,.addNew-cancel-btn{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

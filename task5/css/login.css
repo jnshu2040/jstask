@@ -4,11 +4,10 @@ html{
     width: 100%;
     font-family: "Microsoft YaHei", sans-serif;
 }
-body{
-    width: 100%;
+.background-wrapper{
     background: rgba(0,0,0,0.4) url(../img/background.png) 0 0 ;
 }
-main{
+.background-wrapper{
     display: flex;
     display: -webkit-flex;
     width: 100%;

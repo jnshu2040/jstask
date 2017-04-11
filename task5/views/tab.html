@@ -1,15 +1,15 @@
 <!--<link rel="stylesheet" href="bootstrap-3.3.0/css/bootstrap.css">-->
+<!--<link rel="stylesheet" href="../css/tabPage.css">-->
 
-<link rel="stylesheet" href=""
 <div class="container">
-    <div class="row clearfix">
+    <div class="row clearfix tab-header-wrapper">
         <div class="col-lg-2 column">
-            <h4>后台管理系统</h4>
+            <h4><b>后台管理系统</b></h4>
         </div>
         <div class="col-lg-8 column">
         </div>
-        <div class="col-lg-1 column">
-            管理员
+        <div class="col-lg-1 column tab-header-admin">
+           <p>管理员</p>
         </div>
         <div class="col-lg-1 column">
             <div class="btn btn-default btn-success">退出</div>
@@ -17,11 +17,11 @@
     </div>
     <div class="row clearfix">
         <div class="col-lg-2 column">
-            <ul class="linshi">
-                <li ui-sref=".addNew"><a>添加成员页</a></li>
-                <li ui-sref=".personalInformation"><a>个人信息页</a></li>
-                <li ui-sref=".list"><a>学员列表页</a></li>
-            </ul>
+            <div class="list-unstyled list-group">
+                <a class="list-group-item" ui-sref=".addNew">添加成员页</a>
+                <a class="list-group-item" ui-sref=".personInfo">个人信息页</a>
+                <a class="list-group-item" ui-sref=".list">学员列表页</a>
+            </div>
         </div>
         <div class="col-lg-10 column" ui-view="">
             <!--详情的地方-->

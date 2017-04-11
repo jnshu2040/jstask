@@ -1,0 +1,31 @@
+.info-wrapper{
+    border: 1px solid #03a9f4;
+}
+.info-header{
+    padding: 0 15px;
+    line-height: 48px;
+    color: #fff;
+    background: #03a9f4;
+}
+.info-input-header{
+    text-align: right;
+    line-height: 48px;
+    font-weight: bolder;
+}
+.info-input{
+    height: 32px;
+    margin: 8px 0;
+    background: #fff;
+    outline: none;
+}
+.info-input-wrapper{
+}
+.info-input-photo{
+    display: inline-block;
+    /*width: 200px;*/
+    margin: 0;
+    line-height: 32px;
+    border: 1px solid #ddd;
+}
+
+

@@ -1,0 +1,49 @@
+<!--<link rel="stylesheet" href="../bootstrap-3.3.0/css/bootstrap.css">-->
+<link rel="stylesheet" href="../css/personInfo.css">
+<div class="row clearfix info-wrapper">
+    <div class="clo-xs-12">
+        <div class="row clearfix">
+            <div class="col-xs-12">
+                <div class="info-header">个人信息</div>
+            </div>
+        </div>
+        <div class="row clearfix"><!--表单-->
+            <div class="col-xs-2">
+                <div class="info-input-header">登录名：</div>
+                <div class="info-input-header">密码：</div>
+                <div class="info-input-header">头像：</div>
+            </div>
+            <div class="col-xs-4">
+                <div class="info-input-wrapper">
+                    <input class="info-input" type="text" placeholder="请输入账号">
+                </div>
+                <div class="info-info-wrapper">
+                    <input class="info-input" type="password" placeholder="请输入密码">
+
+                </div>
+                <input class="info-input-photo" type="file" accept="image/png,image/jpeg,imge/gif"
+                       multiple="" id="inputFile" onchange="getFiles()">
+                <button type="button" ng-click="upload()">上传</button>
+            </div>
+        </div><!--///表单结束-->
+        <div class="row clearfix ">
+            <div class="col-xs-6">
+            <div>
+                <img src="" id="img">
+                <img ng-src={{preview}}>
+            </div>
+            </div>
+            <div class="col-xs-6">
+            <div>
+
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+

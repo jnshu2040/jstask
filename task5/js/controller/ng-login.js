@@ -12,18 +12,18 @@ angular.module('myApp')//这是模块，不是模型。
     $scope.submit = function () {//在此定义
         $http({//$http是
             method: 'post',
-            url: "/carrots-admin-ajax/a/login/",//现在是学员接口，要重新设置nginx，问师兄取。
-            params: {//post请求只能用params，不能用data。
+            url: "/a/login",
+            params: {//post请求只能用params，不能用data。//上句话是错的。
                 name: $scope.inputName,
                 pwd:  $scope.inputPassword
-            },
+            }
         }).then(function successCallback(response) {
             // 请求成功执行代码
             console.info(response);
             switch(response.data.code){
                 case 0:
                     console.log($state.go);
-                    $state.go("tab");break;
+                    $state.go("tab.personInfo");break;
                 default: alert(response.data.message)
             }
         }, function errorCallback(response) {
