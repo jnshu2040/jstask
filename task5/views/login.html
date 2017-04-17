@@ -2,15 +2,32 @@
 <div class="background-wrapper"><!--这条指令用于定义一个控制器-->
     <div class="login-m-wrapper">
         <h1 class="login-m-h1">学员管理系统</h1>
-        <!--<form id="login">-->
-            <input class="login-m-user" type="text" id="account" placeholder="用户名"
-                value="1" ng-model="inputName">
+        <form name="login" novalidate>
+            <input class="login-m-user" type="text" id="account" name="account" placeholder="用户名"
+                   value="1" ng-model="inputName"
+                   required ng-minlength="5" ng-maxlength="16" ng-pattern="">
         <!--liginCtrl这个控制器的作用域（$scope）内定义了两个模型（model），-->
-            <input class="login-m-pwd" type="password" id="password" placeholder="密码"
-                value="2" ng-model="inputPassword">
-            <div class="login-m-tip" id="tip"></div>
-            <button class="login-m-submit" id="submit" ng-click="submit()">提交</button>
-        <!--</form>-->
+            <input class="login-m-pwd" type="password" id="password" name="password" placeholder="密码"
+                   value="2" ng-model="inputPassword"
+                   required ng-minlength="5" ng-maxlength="16" ng-pattern="">
+            <div class="login-m-tip">
+                <span ng-messages="login.account.$error" ng-if="login.account.$dirty">
+                    <span ng-message="required">填写用户名</span>
+                    <span ng-message="minlength">用户名最小长度：5</span>
+                    <span ng-message="maxlength">用户名最大长度：16</span>
+                </span>
+                <span ng-messages="login.password.$error" ng-if="login.password.$dirty">
+                    <span ng-message="required">填写密码</span>
+                    <span ng-message="minlength">密码最小长度：5</span>
+                    <span ng-message="maxlength">密码最大长度：16</span>
+                </span>
+                <span ng-if="resMessage!==null">
+                    {{resMessage}}
+                </span>
+
+            </div>
+            <button class="login-m-submit" id="submit" ng-disabled="login.$invalid" ng-click="submit()">提交</button>
+        </form>
     </div>
 </div>
 

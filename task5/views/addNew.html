@@ -26,97 +26,107 @@
             <div class="col-12-xs addNew-list-wrapper"><!--列表wrapper-->
 
                 <div class="row clearfix">
-                    <div class="col-xs-2 addNew-list-header">姓名：</div>
+                    <div class="col-xs-2 addNew-list-header">企业名称：</div>
                     <div class="col-xs-10 addNew-list">
                         <input ng-model="name" type="text" name="name" required
-                               ng-minlength="2" ng-maxlength="5" ng-pattern="/^[\u4e00-\u9fa5]{2,5}$/"
+                               ng-minlength="2" ng-maxlength="15" ng-pattern="/^[\u4e00-\u9fa5]{2,15}$/"
                         >
 
                         <span ng-messages="addNewForm.name.$error" ng-if="addNewForm.name.$dirty" class="addNew-form-alert">
                                 <span ng-message="required">这是必填项</span>
                                 <span ng-message="minlength">最小长度：2</span>
-                                <span ng-message="maxlength">最大长度：5</span>
-                                <span ng-message="pattern">格式：2-5个汉字</span>
-                        </span><p>{{ addNewForm.name.$error}}</p>
+                                <span ng-message="maxlength">最大长度：15</span>
+                                <span ng-message="pattern">格式：2-15个汉字</span>
+                        </span>
+                        <span>{{ addNewForm.name.$error}}</span>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2 addNew-list-header">QQ：</div>
+                    <div class="col-xs-2 addNew-list-header">id：</div>
                     <div class="col-xs-10 addNew-list">
-                        <input ng-model="QQ" type="text" name="QQ" required   placeholder="6-15位数字"
-                            ng-minlength="6" ng-maxlength="15" ng-pattern="/^\w{6,15}$/"
-                        >
-                        <span ng-messages="addNewForm.QQ.$error" ng-if="addNewForm.QQ.$dirty" class="addNew-form-alert">
+                        <input ng-model="id" type="text" name="id" placeholder="id"
+                            ng-minlength="1" ng-maxlength="15" ng-pattern="/^\w|\d{1,15}$/"
+                            readonly style="background:#eee">
+                        <!--只读-->
+                        <span ng-messages="addNewForm.id.$error" ng-if="addNewForm.id.$dirty" class="addNew-form-alert">
                             <span ng-message="required">这是必填项</span>
-                            <span ng-message="minlength">最小长度：6</span>
+                            <span ng-message="minlength">最小长度：1</span>
                             <span ng-message="maxlength">最大长度：15</span>
-                            <span ng-message="pattern">格式：6-15位数字</span>
+                            <span ng-message="pattern">格式：1-15位数字</span>
                         </span>
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2 addNew-list-header">修真类型：</div>
+                    <div class="col-xs-2 addNew-list-header">行业：</div>
                     <div class="col-xs-10 addNew-list">
-                        <label><input ng-model="type" value="1" type="radio" name="type" required>CSS</label>
-                        <label><input ng-model="type" value="2" type="radio" name="type" required>JS</label>
-                        <label><input ng-model="type" value="3" type="radio" name="type" required>JAVA</label>
-                        <label><input ng-model="type" value="4" type="radio" name="type" required>运维</label>
-                        <label><input ng-model="type" value="5" type="radio" name="type" required>DBA</label>
-                        <label><input ng-model="type" value="6" type="radio" name="type" required>产品</label>
-                        <label><input ng-model="type" value="7" type="radio" name="type" required>IOS</label>
-                        <label><input ng-model="type" value="8" type="radio" name="type" required>ANDROD</label>
-                        <span ng-messages="addNewForm.type.$error" ng-if="addNewForm.type.$dirty" class="addNew-form-alert">
+                        <label><input ng-model="industry" value="0" type="radio" name="industry" required>移动互联网</label>
+                        <label><input ng-model="industry" value="1" type="radio" name="industry" required>电子商务</label>
+                        <label><input ng-model="industry" value="2" type="radio" name="industry" required>企业服务</label>
+                        <label><input ng-model="industry" value="3" type="radio" name="industry" required>O2O</label>
+                        <label><input ng-model="industry" value="4" type="radio" name="industry" required>教育</label>
+                        <label><input ng-model="industry" value="5" type="radio" name="industry" required>金融</label>
+                        <label><input ng-model="industry" value="6" type="radio" name="industry" required>游戏</label>
+                        <span ng-messages="addNewForm.industry.$error" ng-if="addNewForm.industry.$dirty" class="addNew-form-alert">
                             <span ng-message="required">这是必填项</span>
                         </span>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2 addNew-list-header">毕业院校：</div>
+                    <div class="col-xs-2 addNew-list-header">公司标语：</div>
                     <div class="col-xs-10 addNew-list">
-                        <input ng-model="school" type="text" name="school">
+                        <input ng-model="slogan" type="text" name="slogan" required class="addNew-list-slogan">
+                        <span ng-messages="addNewForm.solgan.$error" ng-if="addNewForm.solgan.$dirty" class="addNew-form-alert">
+                            <span ng-message="required">这是必填项</span>
+                        </span>
+
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2 addNew-list-header">资质：</div>
+                    <div class="col-xs-2 addNew-list-header">认证状态：</div>
                     <div class="col-xs-10 addNew-list">
-                        <label><input ng-model="talent" value="1" type="radio" name="talent" required>学霸</label>
-                        <label><input ng-model="talent" value="2" type="radio" name="talent" required>学渣</label>
+                        <label><input ng-model="approved" value="1" type="radio" name="approved" required>未认证</label>
+                        <label><input ng-model="approved" value="2" type="radio" name="approved" required>已认证</label>
+                        <span ng-messages="addNewForm.approved.$error" ng-if="addNewForm.approved.$dirty" class="addNew-form-alert">
+                            <span ng-message="required">这是必填项</span>
+                        </span>
+
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2 addNew-list-header">修行等级：</div>
+                    <div class="col-xs-2 addNew-list-header">融资规模：</div>
                     <div class="col-xs-10 addNew-list">
-                        <label><input ng-model="level" type="radio" value="1" name="level" required>0基础</label>
-                        <label><input ng-model="level" type="radio" value="2" name="level" required>修行3个月以内</label>
-                        <label><input ng-model="level" type="radio" value="3" name="level" required>修行6个月以内</label>
-                        <label><input ng-model="level" type="radio" value="4" name="level" required>修行一年以内</label>
-                        <label><input ng-model="level" type="radio" value="5" name="level" required>修行三年以内</label>
-                        <label><input ng-model="level" type="radio" value="6" name="level" required>修行三年以上</label>
-                        <span ng-messages="addNewForm.level.$error" ng-if="addNewForm.level.$dirty" class="addNew-form-alert">
+                        <label><input ng-model="financing" type="radio" value="0" name="financing" required>无需融资</label>
+                        <label><input ng-model="financing" type="radio" value="1" name="financing" required>天使轮</label>
+                        <label><input ng-model="financing" type="radio" value="2" name="financing" required>A轮</label>
+                        <label><input ng-model="financing" type="radio" value="3" name="financing" required>B轮</label>
+                        <label><input ng-model="financing" type="radio" value="4" name="financing" required>C轮</label>
+                        <label><input ng-model="financing" type="radio" value="5" name="financing" required>D轮及以上</label>
+                        <label><input ng-model="financing" type="radio" value="6" name="financing" required>上市公司</label>
+                        <span ng-messages="addNewForm.financing.$error" ng-if="addNewForm.financing.$dirty" class="addNew-form-alert">
                             <span ng-message="required">这是必填项</span>
                         </span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-2 addNew-list-header">预计入学时间：</div>
-                    <div class="col-xs-10 addNew-list">
-                        <input ng-model="joinTime" type="date" name="type" required class="addNew-list-joinTime">
-                        <span ng-messages="addNewForm.joinTime.$error" ng-if="addNewForm.joinTime.$dirty" class="addNew-form-alert">
-                            <span ng-message="required">这是必填项</span>
-                        </span>
-                    </div>
-                </div>
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-2 addNew-list-header">预计入学时间：</div>-->
+                    <!--<div class="col-xs-10 addNew-list">-->
+                        <!--<input ng-model="joinTime" type="date" name="type" required class="addNew-list-joinTime">-->
+                        <!--<span ng-messages="addNewForm.joinTime.$error" ng-if="addNewForm.joinTime.$dirty" class="addNew-form-alert">-->
+                            <!--<span ng-message="required">这是必填项</span>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="row clearfix">
-                    <div class="col-xs-2 addNew-list-header">修行立愿：</div>
+                    <div class="col-xs-2 addNew-list-header">公司介绍：</div>
                     <div class="col-xs-10 addNew-list"></div>
                 </div>
                 <div class="row clearfix">
                     <div class="col-xs-12">
                         <!--<textarea class="textarea" ng-model="wish">富文本编辑器</textarea>-->
 
-                        <script type="text/plain" id="myEditor" style="width:90%;height:240px;">
-                            <p>这里我可以写一些输入提示</p>
+                        <script type="text/plain" id="myEditor" style="width:90%;height:240px;" gn-model="summary">
+                            <p>{{summary}}这个功能还没实现</p>
                         </script>
 
                         <script type="text/javascript">
@@ -126,13 +136,13 @@
 
 
 
-
+                        {{summary}}
 
                     </div>
                 </div>
                 <div class="row clearfix">
                     <div class="col-xs-2 addNew-list-header">{{addNewForm.$valid}}
-                        <button class="btn btn-default addNew-confirm-btn" ng-click="confirm()" ng-disabled="addNewForm.$invalid">确认</button>
+                        <button class="btn btn-default addNew-confirm-btn" ng-click="submit()" ng-disabled="addNewForm.$invalid">{{add_edit}}</button>
                     </div>
                     <div class="col-xs-10 addNew-list">
                         <button class="btn btn-default addNew-cancel-btn" ng-click="toLastPage()">取消</button>
@@ -142,8 +152,7 @@
             </div>
         </div>
     </div>
-
-</form>
+    </form>
 </div>
 
 

@@ -30,10 +30,11 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
         }).state('tab',{
             url: '/tab',
             templateUrl:'views/tab.html',
-            controller:'',
+            controller:'tabCtrl',
             resolve:{
                 loadMyFile:_lazyLoad([
-                    'css/tabPage.css'
+                    'css/tabPage.css',
+                    'js/controller/tab.js'
                 ])
             }
         }).state('tab.list', {
@@ -53,12 +54,14 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
             controller:'personInfoCtrl',
             resolve:{
                 loadMFile:_lazyLoad([
+                    'frame/ng-file-upload.js',
+                    'frame/ng-file-upload-shim.js',
                     'js/controller/personInfo.js',
                     'css/personInfo.css'
                 ])
             }
         }).state('tab.addNew', {
-            url:'/addNew',
+            url:'/addNew?id',
             templateUrl:'views/addNew.html',
             controller:'addNewCtrl',
             resolve:{

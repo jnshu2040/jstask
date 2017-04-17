@@ -1,5 +1,6 @@
 .addNew-wrapper{
     border: 1px solid #03a9f4;
+    min-width: 768px;
 }
 .addNew-header{
     line-height: 48px;
@@ -44,10 +45,16 @@
 .addNew-confirm-btn,.addNew-cancel-btn{
     display: inline-block;
 }
+.addNew-list-slogan{
+    width: 500px;
+}
 
 
-
-
+input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    background: #f00;
+}
 
 
 

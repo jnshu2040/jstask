@@ -3,6 +3,22 @@
  */
 angular.module("myApp")
     .controller('personInfoCtrl',function ($scope,$http) {
+        $scope.name=(JSON.parse(localStorage.user)).manager.name;
+        $scope.image=null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         window.getFiles=function () {
             $scope.file=window.document.getElementById("inputFile").files[0];
             console.log($scope.file);
@@ -15,7 +31,7 @@ angular.module("myApp")
                 document.getElementById("img").src=$scope.preview;
             };
         };
-        $scope.upload=function () {
+        $scope.uploadxx=function () {
             //FormData
             $scope.fileForm=new FormData();
             $scope.fileForm.append($scope.file.name,$scope.file);//文件传入
@@ -23,7 +39,7 @@ angular.module("myApp")
             $http({
                 method:'post',
                 url:"/b/student",///接口
-                params:$scope.fileForm
+                data:$scope.fileForm
                 })
                 .then(
                     function seccessCallback(response){

@@ -22,9 +22,12 @@ angular.module('myApp')//这是模块，不是模型。
             console.info(response);
             switch(response.data.code){
                 case 0:
-                    console.log($state.go);
+                    localStorage.user=JSON.stringify(response.data.data);
+                    localStorage.loginState="true";
                     $state.go("tab.personInfo");break;
-                default: alert(response.data.message)
+                default:
+                    console.log(response.data.message);
+                    $scope.resMessage=response.data.message;break;
             }
         }, function errorCallback(response) {
             // 请求失败执行代码
@@ -32,6 +35,7 @@ angular.module('myApp')//这是模块，不是模型。
         });
         console.log(($scope.inputName)+($scope.inputPassword));
     };
+    if(localStorage.loginState==="true"){$state.go("tab.personInfo")}
 });//myApp.controller
 
 
