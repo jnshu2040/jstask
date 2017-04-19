@@ -89,7 +89,6 @@ angular.module('myApp')
 
 //新增公司
         $scope.addNew=function() {
-            $scope.summary="这个功能没有完成";
             $http({
                 method: 'POST',
                 url: '/a/u/company',
@@ -134,7 +133,7 @@ angular.module('myApp')
             if($scope.pageType==="addPage"){$scope.addNew()}
             else{$scope.updateDetail()}
         };
-
+        $scope.editorContent = '';
 
         $scope.companyObj____={
                 "company":{
@@ -203,8 +202,43 @@ angular.module('myApp')
         // };
 
 
-    });//});controller
+    })//});controller
 
+    .directive('contenteditable', function() {
+        return {
+            restrict: 'A' ,
+            require: '?ngModel',
+            link: function(scope, element, attrs, ngModel) {
+                // 初始化 编辑器内容
+                if (!ngModel) {
+                    return;
+                } // do nothing if no ng-model
+                // Specify how UI should be updated
+                ngModel.$render = function() {
+                    element.html(ngModel.$viewValue || '');
+                };
+                // Listen for change events to enable binding
+                element.on('blur keyup change', function() {
+                    scope.$apply(readViewText);
+                });
+                // No need to initialize, AngularJS will initialize the text based on ng-model attribute
+                // Write data to the model
+                function readViewText() {
+                    var html = element.html();
+                    // When we clear the content editable the browser leaves a <br> behind
+                    // If strip-br attribute is provided then we strip this out
+                    if (attrs.stripBr && html === '<br>') {
+                        html = '';
+                    }
+                    ngModel.$setViewValue(html);
+                }
+
+                // 创建编辑器
+                var editor = new wangEditor(element);
+                editor.create();
+            }
+        };
+    });
 
 
 

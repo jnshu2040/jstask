@@ -123,13 +123,8 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-xs-12"><!--wangEditor-->
-                        <div id="wangEditor" class="editor-introduction"> <p>富文本编辑器还没有完成</p></div>
-                        <script type="text/javascript">
-                            $(function () {
-                                var editor = new wangEditor('wangEditor');
-                                editor.create();
-                            });
-                        </script>
+                        <div id="wangEditor" contenteditable="true" ng-model="summary" class="editor-introduction"> <p>{{summary}}</p></div>
+
 
                     </div>
                     <!--<div class="col-xs-12">-->

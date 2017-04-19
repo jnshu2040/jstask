@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fe055b2-bc21-4ffc-ba3c-7d57938881af" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/css/addNew.css" afterPath="$PROJECT_DIR$/task5/css/addNew.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/index.html" afterPath="$PROJECT_DIR$/task5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/js/config.js" afterPath="$PROJECT_DIR$/task5/js/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/js/controller/addNew.js" afterPath="$PROJECT_DIR$/task5/js/controller/addNew.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/views/addNew.html" afterPath="$PROJECT_DIR$/task5/views/addNew.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,14 +17,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7192308">
+    <splitter split-orientation="horizontal" split-proportion="0.46504784">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="addNew.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task5/js/controller/addNew.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+                <state relative-caret-position="450">
+                  <caret line="139" column="28" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -75,8 +73,8 @@
           <file leaf-file-name="addNew.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/task5/views/addNew.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="123" column="42" lean-forward="true" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
+                <state relative-caret-position="252">
+                  <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -128,11 +126,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="addNew.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="addNew.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/task5/js/controller/addNew.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+                <state relative-caret-position="1713">
+                  <caret line="206" column="31" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -164,9 +162,9 @@
                 <state relative-caret-position="252">
                   <caret line="83" column="22" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
                   <folding>
-                    <marker date="1492601597584" expanded="true" signature="7948:8583" ph="..." />
-                    <marker date="1492601597584" expanded="false" signature="8144:8167" ph="..." />
-                    <marker date="1492601597584" expanded="true" signature="8187:8283" ph="..." />
+                    <marker date="1492611118092" expanded="true" signature="7701:8336" ph="..." />
+                    <marker date="1492611118092" expanded="false" signature="7897:7920" ph="..." />
+                    <marker date="1492611118092" expanded="true" signature="7940:8036" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -224,11 +222,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task5/js/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+                <state relative-caret-position="252">
+                  <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -274,7 +272,6 @@
         <option value="$PROJECT_DIR$/task5/views/personInfo.html" />
         <option value="$PROJECT_DIR$/task5/js/filter/filter.js" />
         <option value="$PROJECT_DIR$/task5/js/controller/personInfo.js" />
-        <option value="$PROJECT_DIR$/task5/js/controller/addNew.js" />
         <option value="$PROJECT_DIR$/task5/nginx.txt" />
         <option value="$PROJECT_DIR$/task5/js/controller/list.js" />
         <option value="$PROJECT_DIR$/task5/css/list.css" />
@@ -283,6 +280,7 @@
         <option value="$PROJECT_DIR$/task5/index.html" />
         <option value="$PROJECT_DIR$/task5/js/config.js" />
         <option value="$PROJECT_DIR$/task5/css/addNew.css" />
+        <option value="$PROJECT_DIR$/task5/js/controller/addNew.js" />
         <option value="$PROJECT_DIR$/task5/views/addNew.html" />
       </list>
     </option>
@@ -699,7 +697,7 @@
       <workItem from="1492401734533" duration="321000" />
       <workItem from="1492416637058" duration="19284000" />
       <workItem from="1492482857847" duration="1264000" />
-      <workItem from="1492496063911" duration="19573000" />
+      <workItem from="1492496063911" duration="23296000" />
     </task>
     <task id="LOCAL-00001" summary="fewfsa">
       <created>1492442389929</created>
@@ -726,7 +724,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102363000" />
+    <option name="totallyTimeSpent" value="106086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -1109,14 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task5/js/controller/addNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task5/frame/umEditor/umeditor.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1135,14 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task5/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task5/css/addNew.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1151,10 +1133,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task5/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task5/js/controller/addNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="139" column="28" lean-forward="true" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task5/views/addNew.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="123" column="42" lean-forward="true" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
+        <state relative-caret-position="252">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding />
         </state>
       </provider>
