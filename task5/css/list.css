@@ -33,7 +33,11 @@ background: #03a9f4;
 .listPage-detail-list-btn{
 
 }
-
+select{
+    width: 150px;
+    height: 32px;
+    font-size: 16px;
+}
 /*.addNew-list-slogan{*/
     /*width: 400px;*/
 /*}*/

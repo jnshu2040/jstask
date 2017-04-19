@@ -38,10 +38,10 @@
                                 <span ng-message="maxlength">最大长度：15</span>
                                 <span ng-message="pattern">格式：2-15个汉字</span>
                         </span>
-                        <span>{{ addNewForm.name.$error}}</span>
+                        <!--<span>{{ addNewForm.name.$error}}</span>-->
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" ng-if="pageType=='editPage'">
                     <div class="col-xs-2 addNew-list-header">id：</div>
                     <div class="col-xs-10 addNew-list">
                         <input ng-model="id" type="text" name="id" placeholder="id"
@@ -85,8 +85,8 @@
                 <div class="row">
                     <div class="col-xs-2 addNew-list-header">认证状态：</div>
                     <div class="col-xs-10 addNew-list">
-                        <label><input ng-model="approved" value="1" type="radio" name="approved" required>未认证</label>
-                        <label><input ng-model="approved" value="2" type="radio" name="approved" required>已认证</label>
+                        <label><input ng-model="approved" value="0" type="radio" name="approved" required>未认证</label>
+                        <label><input ng-model="approved" value="1" type="radio" name="approved" required>已认证</label>
                         <span ng-messages="addNewForm.approved.$error" ng-if="addNewForm.approved.$dirty" class="addNew-form-alert">
                             <span ng-message="required">这是必填项</span>
                         </span>
@@ -126,7 +126,7 @@
                         <!--<textarea class="textarea" ng-model="wish">富文本编辑器</textarea>-->
 
                         <script type="text/plain" id="myEditor" style="width:90%;height:240px;" gn-model="summary">
-                            <p>{{summary}}这个功能还没实现</p>
+                            <p>富文本编辑器功能还没实现</p>
                         </script>
 
                         <script type="text/javascript">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div class="row clearfix">
-                    <div class="col-xs-2 addNew-list-header">{{addNewForm.$valid}}
+                    <div class="col-xs-2 addNew-list-header">
                         <button class="btn btn-default addNew-confirm-btn" ng-click="submit()" ng-disabled="addNewForm.$invalid">{{add_edit}}</button>
                     </div>
                     <div class="col-xs-10 addNew-list">
