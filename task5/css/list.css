@@ -28,9 +28,15 @@ background: #03a9f4;
 }
 .listPage-detail-list-header{
     text-align: center;
-    line-height: 40px;
+    line-height: 32px;
+    background:#eee;
 }
-.listPage-detail-list-btn{
+.listPage-detail-list{
+    text-align: center;
+    line-height: 48px;
+    border-bottom: 1px solid #eee;
+    word-break: normal;
+    overflow: hidden;
 
 }
 select{
@@ -42,3 +48,10 @@ select{
     /*width: 400px;*/
 /*}*/
 
+.list-page-btn-wrapper{
+    text-align: center;
+}
+.list-page-page{
+    width: 50px;
+    height: 32px;
+}

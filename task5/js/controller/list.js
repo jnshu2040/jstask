@@ -57,7 +57,9 @@ angular.module('myApp')
         $scope.addNew=function(){$state.go("tab.addNew")};
 
         $scope.sumPage=function(){console.log($scope.resData);
-            return Math.floor($scope.resData.total/$scope.resData.size)+1
+            if($scope.resData){
+                return Math.floor($scope.resData.total/$scope.resData.size)+1
+            }else {return "*"}
         };
         $scope.page=1;
         $scope.pageNext=function(){console.log($scope.sumPage());

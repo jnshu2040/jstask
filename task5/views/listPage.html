@@ -55,36 +55,36 @@
                 <button class="btn btn-default listPage-detail-header-btn" ng-click="addNew()">新增</button>
             </div>
         </div>
-        <div class="row clearfix listPage-detail-list-header">
-            <div class=col-sm-2>公司id</div>
-            <div class=col-sm-2>公司名称</div>
-            <div class=col-sm-2>行业</div>
-            <div class=col-sm-2>融资规模</div>
-            <div class=col-sm-2>认证状态</div>
-            <div class=col-sm-2>操作</div>
-        </div>
-        <div class="row clearfix listPage-detail-list-header"
-             ng-repeat="company in companyRes">
-            <div class=col-sm-2>{{company.id}}</div>
-            <div class=col-sm-2>{{company.name}}</div>
-            <div class=col-sm-2>{{company.industryList[0] | industry}}</div>
-            <div class=col-sm-2>{{company.financing | financing}}</div>
-            <div class=col-sm-2>{{company.approved | approvedStatus}}</div>
-            <div class=col-sm-2>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="btn btn-xs listPage-detail-list-btn" ui-sref="tab.addNew({id:company.id})">编辑</div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="btn btn-xs listPage-detail-list-btn" ng-click="delete(company.id,company.name)">删除</div>
-                    </div>
+
+
+        <table class="table table-striped">
+            <div class="row clearfix listPage-detail-list-header">
+                <div class=col-sm-2>公司id</div>
+                <div class=col-sm-2>公司名称</div>
+                <div class=col-sm-2>行业</div>
+                <div class=col-sm-2>融资规模</div>
+                <div class=col-sm-2>认证状态</div>
+                <div class=col-sm-2>操作</div>
+            </div>
+            <div class="row clearfix listPage-detail-list"
+                 ng-repeat="company in companyRes">
+                <div class=col-sm-2>{{company.id}}</div>
+                <div class=col-sm-2>{{company.name}}</div>
+                <div class=col-sm-2>{{company.industryList[0] | industry}}</div>
+                <div class=col-sm-2>{{company.financing | financing}}</div>
+                <div class=col-sm-2>{{company.approved | approvedStatus}}</div>
+                <div class=col-sm-2>
+                    <div class="btn btn-xs btn-info listPage-detail-list-btn" ui-sref="tab.addNew({id:company.id})">编辑</div>
+                    <div class="btn btn-xs btn-warning listPage-detail-list-btn" ng-click="delete(company.id,company.name)">删除</div>
                 </div>
             </div>
-        </div>
-        <div class="">
-            <div class="btn" ng-click="pageUp()">上一页</div>
-            <input type="text" value="{{page}}" ng-model="page">
-            <div class="btn" ng-click="pageNext()">下一页</div>
+        </table>
+        <div class="row">
+            <div class="col-xs-12 list-page-btn-wrapper">
+                <div class="btn btn-primary" ng-click="pageUp()">上一页</div>
+                <input type="text" value="{{page+'/'+sumPage()}}" readonly class="list-page-page">
+                <div class="btn btn-primary" ng-click="pageNext()">下一页</div>
+            </div>
         </div>
     </div>
 </div>
