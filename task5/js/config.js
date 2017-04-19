@@ -66,13 +66,16 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
             controller:'addNewCtrl',
             resolve:{
                 loadMyFile:_lazyLoad([
-                    'frame/umEditor/themes/default/css/umeditor.css',
-                    'frame/umEditor/third-party/template.min.js',
-                    'frame/umEditor/umeditor.config.js',
-                    'frame/umEditor/umeditor.min.js',
-                    'frame/umEditor/lang/zh-cn/zh-cn.js',
-                    'js/controller/addNew.js',
-                    'css/addNew.css'
+                    'frame/wangEditor/dist/css/wangEditor.css',
+                    // 'frame/wangEditor/dist/js/lib/jquery-2.2.1.js',
+                    'frame/wangEditor/dist/js/wangEditor.js',
+                    // 'frame/umEditor/themes/default/css/umeditor.css',
+                    // 'frame/umEditor/third-party/template.min.js',
+                    // 'frame/umEditor/umeditor.config.js',
+                    // 'frame/umEditor/umeditor.min.js',
+                    // 'frame/umEditor/lang/zh-cn/zh-cn.js',
+                    'css/addNew.css',
+                    'js/controller/addNew.js'
                 ])
             }
         }).state('404', {

@@ -56,8 +56,15 @@ input[type="radio"]{
     background: #f00;
 }
 
-
-
+.editor-introduction{
+    /*width: 80%;*/
+    /*margin: 16px 10%;*/
+    height: 300px;
+}
+.wangEditor-container{
+    width: 90%;
+    margin: 0 auto;
+}
 
 
 

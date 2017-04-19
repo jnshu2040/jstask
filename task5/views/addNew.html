@@ -122,23 +122,33 @@
                     <div class="col-xs-10 addNew-list"></div>
                 </div>
                 <div class="row clearfix">
-                    <div class="col-xs-12">
-                        <!--<textarea class="textarea" ng-model="wish">富文本编辑器</textarea>-->
-
-                        <script type="text/plain" id="myEditor" style="width:90%;height:240px;" gn-model="summary">
-                            <p>富文本编辑器功能还没实现</p>
-                        </script>
-
+                    <div class="col-xs-12"><!--wangEditor-->
+                        <div id="wangEditor" class="editor-introduction"> <p>富文本编辑器还没有完成</p></div>
                         <script type="text/javascript">
-                            //实例化编辑器
-                            var um = UM.getEditor('myEditor');
+                            $(function () {
+                                var editor = new wangEditor('wangEditor');
+                                editor.create();
+                            });
                         </script>
-
-
-
-                        {{summary}}
 
                     </div>
+                    <!--<div class="col-xs-12">-->
+                        <!--&lt;!&ndash;<textarea class="textarea" ng-model="wish">富文本编辑器</textarea>&ndash;&gt;-->
+
+                        <!--<script type="text/plain" id="myEditor" style="width:90%;height:240px;" gn-model="summary">-->
+                            <!--<p>富文本编辑器功能还没实现</p>-->
+                        <!--</script>-->
+
+                        <!--<script type="text/javascript">-->
+                            <!--//实例化编辑器-->
+                            <!--var um = UM.getEditor('myEditor');-->
+                        <!--</script>-->
+
+
+
+                        <!--{{summary}}-->
+
+                    <!--</div>-->
                 </div>
                 <div class="row clearfix">
                     <div class="col-xs-2 addNew-list-header">
