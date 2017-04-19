@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6fe055b2-bc21-4ffc-ba3c-7d57938881af" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/css/list.css" afterPath="$PROJECT_DIR$/task5/css/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/js/controller/list.js" afterPath="$PROJECT_DIR$/task5/js/controller/list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/views/listPage.html" afterPath="$PROJECT_DIR$/task5/views/listPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task5/views/tab.html" afterPath="$PROJECT_DIR$/task5/views/tab.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5228277">
+    <splitter split-orientation="horizontal" split-proportion="0.56921947">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="addNew.js" pinned="false" current-in-tab="false">
@@ -43,11 +40,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="listPage.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="listPage.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task5/views/listPage.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="78" column="22" lean-forward="false" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+                <state relative-caret-position="445">
+                  <caret line="88" column="10" lean-forward="true" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tab.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/task5/views/tab.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="576">
+                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -113,16 +120,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/task5/js/controller/login.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -147,10 +144,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task5/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
+                <state relative-caret-position="-20">
                   <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
                   <folding />
                 </state>
@@ -207,11 +204,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tab.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="tab.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/task5/js/controller/tab.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+                <state relative-caret-position="162">
+                  <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -267,7 +264,6 @@
         <option value="$PROJECT_DIR$/task5/views/personInfo.html" />
         <option value="$PROJECT_DIR$/task5/js/filter/filter.js" />
         <option value="$PROJECT_DIR$/task5/index.html" />
-        <option value="$PROJECT_DIR$/task5/views/tab.html" />
         <option value="$PROJECT_DIR$/task5/js/controller/personInfo.js" />
         <option value="$PROJECT_DIR$/task5/js/config.js" />
         <option value="$PROJECT_DIR$/task5/js/controller/addNew.js" />
@@ -277,6 +273,7 @@
         <option value="$PROJECT_DIR$/task5/js/controller/list.js" />
         <option value="$PROJECT_DIR$/task5/css/list.css" />
         <option value="$PROJECT_DIR$/task5/views/listPage.html" />
+        <option value="$PROJECT_DIR$/task5/views/tab.html" />
       </list>
     </option>
   </component>
@@ -562,7 +559,7 @@
       <workItem from="1492401734533" duration="321000" />
       <workItem from="1492416637058" duration="19284000" />
       <workItem from="1492482857847" duration="1264000" />
-      <workItem from="1492496063911" duration="10648000" />
+      <workItem from="1492496063911" duration="13073000" />
     </task>
     <task id="LOCAL-00001" summary="fewfsa">
       <created>1492442389929</created>
@@ -578,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492570751801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fewfsa">
+      <created>1492578699801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492578699801</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93438000" />
+    <option name="totallyTimeSpent" value="95863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -854,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task5/views/tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task5/views/personInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -872,14 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task5/js/controller/tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -996,6 +985,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task5/views/listPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1004,10 +1001,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task5/index.html">
+    <entry file="file://$PROJECT_DIR$/task5/views/tab.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="576">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task5/js/controller/tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
