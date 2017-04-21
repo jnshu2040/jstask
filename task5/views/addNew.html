@@ -147,10 +147,10 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-xs-2 addNew-list-header">
-                        <button class="btn btn-default addNew-confirm-btn" ng-click="submit()" ng-disabled="addNewForm.$invalid">{{add_edit}}</button>
+                        <button class="btn btn-default btn-primary addNew-confirm-btn" ng-click="submit()" ng-disabled="er||addNewForm.$invalid">{{add_edit}}</button>
                     </div>
                     <div class="col-xs-10 addNew-list">
-                        <button class="btn btn-default addNew-cancel-btn" ng-click="toLastPage()">取消</button>
+                        <button class="btn btn-default btn-warning addNew-cancel-btn" ng-click="toLastPage()">取消</button>
                     </div>
                 </div>
                 <div class="bottom-1"> </div>

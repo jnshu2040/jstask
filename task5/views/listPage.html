@@ -75,15 +75,21 @@
                 <div class=col-sm-2>{{company.approved | approvedStatus}}</div>
                 <div class=col-sm-2>
                     <div class="btn btn-xs btn-info listPage-detail-list-btn" ui-sref="tab.addNew({id:company.id})">编辑</div>
-                    <div class="btn btn-xs btn-warning listPage-detail-list-btn" ng-click="delete(company.id,company.name)">删除</div>
+                    <div class="btn btn-xs btn-warning listPage-detail-list-btn" ng-click="delete(company.id,company.name)"
+                         ng-disabled="delState">删除</div>
                 </div>
             </div>
         </table>
         <div class="row">
             <div class="col-xs-12 list-page-btn-wrapper">
-                <div class="btn btn-primary" ng-click="pageUp()">上一页</div>
+                <button class="btn btn-primary" ng-click="pageUp()" ng-disabled="pageUpState">上一页</button>
                 <input type="text" value="{{page+'/'+sumPage()}}" readonly class="list-page-page">
-                <div class="btn btn-primary" ng-click="pageNext()">下一页</div>
+                <button class="btn btn-primary" ng-click="pageNext()" ng-disabled="pageDownState">下一页</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 zhanwei">
+
             </div>
         </div>
     </div>

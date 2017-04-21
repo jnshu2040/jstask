@@ -21,18 +21,20 @@
                     <input class="info-input" type="password" value="********" readonly>
 
                 </div>
-                <!--<input class="info-input-photo" type="file" accept="image/png,image/jpeg,imge/gif"-->
-                       <!--multiple="" id="inputFile" onchange="getFiles()">-->
-                <div class="info-input-select" ng-model="data.file"
-                     ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false">
-                    选择文件
-                </div>
+                <input class="info-input-photo" type="file" accept="image/png,image/jpeg,imge/gif"
+                       multiple="" id="inputFile" onchange="getFiles()">
+                <!--<div class="info-input-select" ng-model="data.file"-->
+                     <!--ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false">-->
+                    <!--选择文件-->
+                <!--</div>   -->
+
                 <button type="button" ng-click="upload()">上传</button>
             </div>
         </div><!--///表单结束-->
         <div class="row clearfix ">
             <div class="col-xs-6">
-                <img ngf-src="data.file" class="info-img-preview">
+                <!--<img ngf-src="data.file" class="info-img-preview">       -->
+                <img id="img" src="{{preview}}" class="info-img-preview">
             </div>
             <div class="col-xs-6">
             <div>

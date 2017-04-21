@@ -83,8 +83,32 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
             templateUrl:'404.html',
             // controller:''
         }
-    );
-});
+    )
+
+})//.config结束
+    .service('httpService',function($http){
+        this.getList=function (industry,approved,financing,page) {
+            return $http({
+                    method:'GET',
+                    url:'/a/company/search/',
+                    params:{
+                        "industry": industry,
+                        "approved": approved,
+                        "financing":financing,
+                        "page":page
+                    },
+                    timeout:"2000"
+                })
+        };
+
+        this.deleteDetail=function (id) {
+            return $http.delete("/a/u/company/" + id, "")
+        }
+
+
+
+
+    })
 
 
 

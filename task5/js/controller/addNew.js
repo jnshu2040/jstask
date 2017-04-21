@@ -88,7 +88,9 @@ angular.module('myApp')
         };$scope.add_edit__();
 
 //新增公司
+        $scope.er=false;
         $scope.addNew=function() {
+            $scope.er=true;
             $http({
                 method: 'POST',
                 url: '/a/u/company',
@@ -96,12 +98,12 @@ angular.module('myApp')
                 timeout: "3000"
             }).then(function success(response) {
                 console.log(response);
-                if(Number(response.data.code)===0) {
-                    alert("添加成功");
-                    // $scope.getDetail()
+                if(Number(response.data.code)===0) {alert("添加成功");
+                    $state.go("tab.list");
                 }else{alert("服务器返回的错误"+response.data.code+":"+response.data.message)}
             }, function error(response) {
-                alert('服务器未响应' + response)
+                alert('服务器未响应' + response);
+                $scope.er=false;
             })
         };
 //修改公司
@@ -114,6 +116,7 @@ angular.module('myApp')
                 $scope.companyRes.company.summary=$scope.summary;
                 $scope.companyRes.industryList[0].industry=$scope.industry;
             }
+            $scope.er=true;
             $http({
                 method:"PUT",
                 url:'/a/u/company/'+$scope.id,
@@ -122,10 +125,13 @@ angular.module('myApp')
             }).then(
                 function success(response) {
                     console.log(response);
-                    if(Number(response.data.code)===0){alert("修改成功")}
+                    $scope.er=false;
+                    if(Number(response.data.code)===0){alert("修改成功");
+
+                    }
                     else(alert('服务器返回的错误'+response))
-                },function error(response){
-                    alert("失败"+response)
+                },function error(response){alert("失败"+response);
+                $scope.er=false;
                 }
             )
         };

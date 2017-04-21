@@ -1,21 +1,21 @@
 	server{
-	    listen         8088;#                                                         萝卜多复盘项目端口
-		server_name    localhost;
-		
-		location    / {
-		    root       D:/jstask/task5;#项目路径
-			index      index.html;#首页
-		}
-		
-		location /a/{
-		proxy_pass  http://dev.admin.carrots.ptteng.com;
-		}#有/不会组合接口名称,没有就两用，(规则和接口)，跨域配置
-	}
+         	    listen         8088;#                                                         萝卜多复盘项目端口
+         		server_name    localhost;
 
-#用户名：admin
-#密码：123456
+         		location    / {
+         		    root       D:/jstask/task5;#项目路径
+         			index      index.html;#首页
+         		}
 
-#登录接口（post）：/a/login
+         		location /a/{
+         		proxy_pass  http://dev.admin.carrots.ptteng.com;
+         		}#有/不会组合接口名称,没有就两用，(规则和接口)，跨域配置
+         	}
+
+         #用户名：admin
+         #密码：123456
+
+         #登录接口（post）：/a/login
 
 
-#列表接口：/a/
+         #列表接口：/a/

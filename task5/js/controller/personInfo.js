@@ -7,43 +7,37 @@ angular.module("myApp")
         $scope.image=null;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         window.getFiles=function () {
             $scope.file=window.document.getElementById("inputFile").files[0];
             console.log($scope.file);
             $scope.reader=new window.FileReader();//实例化FileReader
             $scope.reader.readAsDataURL($scope.file);//读取为base64
             $scope.reader.onload=function (e) {
-                console.log($scope.reader.result);//看看是什么//然后准备formData
+                // console.log($scope.reader.result);//看看是什么//然后准备formData
                 $scope.preview=$scope.reader.result;//预览
-                console.log($scope.preview);
+                // console.log($scope.preview);
                 document.getElementById("img").src=$scope.preview;
             };
         };
-        $scope.uploadxx=function () {
-            //FormData
+        $scope.upload=function () {
+            //FormData//使用artical的接口
             $scope.fileForm=new FormData();
-            $scope.fileForm.append($scope.file.name,$scope.file);//文件传入
+            $scope.fileForm.append("file",$scope.file);//文件传入
             //ajax请求
             $http({
-                method:'post',
-                url:"/b/student",///接口
+                method:'POST',
+                url:"/a/u/img/1",///接口
                 data:$scope.fileForm
-                })
+                // contentType: false,
+                // processData: false
+                // contentLength:false,
+                // cache:false
+            })
                 .then(
                     function seccessCallback(response){
-                        console.log("上传图片--服务器返回"+response)
+                        if(response.data.code){
+                            console.log(response.data.data.url)
+                        }
                     },
                     function errorCallback(response) {
                         console.error(response)
