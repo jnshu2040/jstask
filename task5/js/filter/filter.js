@@ -38,7 +38,7 @@ angular.module('myApp')
                 default: return "其它";break;
             }
         }
-    })
+    });
 
 
 

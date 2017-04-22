@@ -43,6 +43,7 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
             controller:'listCtrl',
             resolve:{
                 loadMyFile:_lazyLoad([
+                    'js/service/service.js',
                     'js/controller/list.js',
                     'js/filter/filter.js',
                     'css/list.css'
@@ -75,6 +76,9 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
                     // 'frame/umEditor/umeditor.min.js',
                     // 'frame/umEditor/lang/zh-cn/zh-cn.js',
                     'css/addNew.css',
+                    'js/directive/directive.js',
+                    'js/service/service.js',
+                    'js/factory/factory.js',
                     'js/controller/addNew.js'
                 ])
             }
@@ -86,29 +90,7 @@ angular.module('myApp',['ui.router','ngMessages','oc.lazyLoad'])
     )
 
 })//.config结束
-    .service('httpService',function($http){
-        this.getList=function (industry,approved,financing,page) {
-            return $http({
-                    method:'GET',
-                    url:'/a/company/search/',
-                    params:{
-                        "industry": industry,
-                        "approved": approved,
-                        "financing":financing,
-                        "page":page
-                    },
-                    timeout:"2000"
-                })
-        };
 
-        this.deleteDetail=function (id) {
-            return $http.delete("/a/u/company/" + id, "")
-        }
-
-
-
-
-    })
 
 
 

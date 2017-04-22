@@ -2,42 +2,13 @@
  * Created by 1 on 2017/4/4.
  */
 angular.module('myApp')
-    .controller('addNewCtrl',function ($scope,$http, $state,$stateParams) {
+    .controller('addNewCtrl',function ($scope,$http, $state,$stateParams,httpService,companyFactory) {
+//取消
         $scope.toLastPage=function () {
             $state.go('tab.list')
         };
-        $scope.id=$stateParams.id;
-        $scope.createCompanyObj=function () {
-            $scope.companyObj={
-                company: {
-                    name: $scope.name,
-                    province: $scope.province = "340000",
-                    city: $scope.city = "340001",
-                    county: $scope.county = "340002",
-                    financing: $scope.financing,
-                    approved: $scope.approved,//返回的key是approved,请求的key是approved
-                    freezed: $scope.freezed = 0,//同上
-                    logo: $scope.logo = "logo",
-                    slogan: $scope.slogan,
-                    totalNum: $scope.totalNum = 100,
-                    summary: $scope.summary,
-                    phone: $scope.phone = "18866668888",
-                    address: $scope.address = "address地址",
-                    map: $scope.map = "map地图string",
-                    mail: $scope.mail = "123456@163.com"
-                },
-                industryList:[{industry:$scope.industry}]
-                // tags: $scope.tags=[{tag:"示例标语"}],//数组
-                // productList: $scope.productList=[{
-                //     id: 1,
-                //     name:"产品名称",
-                //     slogan:"示例产品标语",
-                //     summary: "示例产品介绍",
-                //     logo: "产品logo链接"
-                // }]
-            };
-            return $scope.companyObj;
-        };
+        $scope.id=$stateParams.id;//获取id
+
 //获取公司明细
         $scope.getDetail=function (){
             $http.get('/a/company/' + $scope.id).then(
@@ -75,7 +46,8 @@ angular.module('myApp')
                 }
             )
         };
-        $scope.add_edit__=function () {//判断页面累型
+//判断页面累型
+        $scope.add_edit__=function () {
             if ($scope.id>0){
                 $scope.add_edit= "保存";
                 $scope.pageType="editPage";
@@ -88,15 +60,19 @@ angular.module('myApp')
         };$scope.add_edit__();
 
 //新增公司
-        $scope.er=false;
         $scope.addNew=function() {
             $scope.er=true;
-            $http({
-                method: 'POST',
-                url: '/a/u/company',
-                data: $scope.createCompanyObj(),
-                timeout: "3000"
-            }).then(function success(response) {
+            httpService.addNew(
+                companyFactory.companyObj(
+                    $scope.name,
+                    $scope.financing,
+                    $scope.approved,
+                    $scope.slogan,
+                    $scope.summary,
+                    $scope.industry
+                )
+            )
+            .then(function success(response) {
                 console.log(response);
                 if(Number(response.data.code)===0) {alert("添加成功");
                     $state.go("tab.list");
@@ -108,7 +84,7 @@ angular.module('myApp')
         };
 //修改公司
         $scope.updateDetail=function () {
-            if($scope.companyRes){
+            if($scope.companyRes){//修改的内容，如果作为页面的变量，就不要赋值了。
                 $scope.companyRes.company.name=$scope.name;
                 $scope.companyRes.company.financing=$scope.financing;
                 $scope.companyRes.company.approved=$scope.approved;
@@ -117,21 +93,17 @@ angular.module('myApp')
                 $scope.companyRes.industryList[0].industry=$scope.industry;
             }
             $scope.er=true;
-            $http({
-                method:"PUT",
-                url:'/a/u/company/'+$scope.id,
-                data:$scope.companyRes,
-                timeout:"3000"
-            }).then(
-                function success(response) {
-                    console.log(response);
-                    $scope.er=false;
-                    if(Number(response.data.code)===0){alert("修改成功");
+            httpService.edit($scope.id,$scope.companyRes)
+                .then(
+                    function success(response) {
+                        console.log(response);
+                        $scope.er=false;
+                        if(Number(response.data.code)===0){alert("修改成功");
 
-                    }
-                    else(alert('服务器返回的错误'+response))
-                },function error(response){alert("失败"+response);
-                $scope.er=false;
+                        }
+                        else(alert('服务器返回的错误'+response))
+                    },function error(response){alert("失败"+response);
+                    $scope.er=false;
                 }
             )
         };
@@ -183,68 +155,11 @@ angular.module('myApp')
 
 
 
-        // $scope.confirm=function () {
-        //     $scope.dateStr=$filter("date")($scope.joinTime,"yyyyMMdd");
-        //     $scope.addForm={
-        //         name:$scope.name,
-        //         qq:$scope.QQ,
-        //         type:$scope.type,
-        //         school:$scope.school,
-        //         talent:$scope.talent,
-        //         level:$scope.level,
-        //         joinTime:$scope.dateStr,
-        //         wish:$scope.wish
-        //     };
-        //     console.info(JSON.stringify($scope.addForm));
-        //     $http({
-        //         method:"POST",
-        //         url:"/b/student",
-        //         data:JSON.stringify($scope.addForm)
-        //     }).then(function success(resp){
-        //         console.info(resp.data)
-        //     },function error(resp){
-        //         console.error(resp)
-        //     })
-        // };
 
 
-    })//});controller
+    });//});controller
 
-    .directive('contenteditable', function() {
-        return {
-            restrict: 'A' ,
-            require: '?ngModel',
-            link: function(scope, element, attrs, ngModel) {
-                // 初始化 编辑器内容
-                if (!ngModel) {
-                    return;
-                } // do nothing if no ng-model
-                // Specify how UI should be updated
-                ngModel.$render = function() {
-                    element.html(ngModel.$viewValue || '');
-                };
-                // Listen for change events to enable binding
-                element.on('blur keyup change', function() {
-                    scope.$apply(readViewText);
-                });
-                // No need to initialize, AngularJS will initialize the text based on ng-model attribute
-                // Write data to the model
-                function readViewText() {
-                    var html = element.html();
-                    // When we clear the content editable the browser leaves a <br> behind
-                    // If strip-br attribute is provided then we strip this out
-                    if (attrs.stripBr && html === '<br>') {
-                        html = '';
-                    }
-                    ngModel.$setViewValue(html);
-                }
 
-                // 创建编辑器
-                var editor = new wangEditor(element);
-                editor.create();
-            }
-        };
-    });
 
 
 

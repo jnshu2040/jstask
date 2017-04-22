@@ -35,19 +35,19 @@ angular.module('myApp')
                     )
             }
         };
-        $scope.industry=$scope.approved=$scope.financing="";
-        $scope.search=function () {
+        $scope.industry=$scope.approved=$scope.financing="";//初始化变量，可以没有
+        $scope.search=function () {//搜索
             httpService.getList($scope.industry,$scope.approved,$scope.financing,"")
         };
-        $scope.addNew=function(){$state.go("tab.addNew")};
+        $scope.addNew=function(){$state.go("tab.addNew")};//添加，跳转
 
-        $scope.sumPage=function(){console.log($scope.resData);
+        $scope.sumPage=function(){console.log($scope.resData);//计算总页面长度
             if($scope.resData){
                 return Math.floor($scope.resData.total/$scope.resData.size)+1
             }else {return "*"}
         };
-        $scope.page=1;
-        $scope.pageNext=function(){console.log($scope.sumPage());
+        $scope.page=1;//初始化为第一页
+        $scope.pageNext=function(){console.log($scope.sumPage());//下一页
             if($scope.page<$scope.sumPage()){
                 $scope.pageDownState=true;
                 $scope.page++;
@@ -65,7 +65,7 @@ angular.module('myApp')
                 })
             }
         };
-        $scope.pageUp=function(){console.log($scope.page);
+        $scope.pageUp=function(){console.log($scope.page);//上一页
             if($scope.page>1){
                 $scope.pageUpState=true;
                 $scope.page--;
@@ -87,7 +87,6 @@ angular.module('myApp')
                     )
             }
         }
-
 
     }]);
 
