@@ -2,7 +2,7 @@
  * Created by 1 on 2017/4/4.
  */
 angular.module('myApp')
-    .controller('addNewCtrl',function ($scope,$http, $state,$stateParams,httpService,companyFactory) {
+    .controller('addNewCtrl',function ($scope,$http, $state,$stateParams,httpService,companyFactory,companyProvider) {
 //取消
         $scope.toLastPage=function () {
             $state.go('tab.list')
@@ -83,8 +83,9 @@ angular.module('myApp')
             })
         };
 //修改公司
-        $scope.updateDetail=function () {
-            if($scope.companyRes){//修改的内容，如果作为页面的变量，就不要赋值了。
+        $scope.updateDetail=function () {//自定义的provider
+            companyProvider.sayName($scope.name);
+            if($scope.companyRes){//修改的内容，如果作为页面的变量，就不用手动赋值了。
                 $scope.companyRes.company.name=$scope.name;
                 $scope.companyRes.company.financing=$scope.financing;
                 $scope.companyRes.company.approved=$scope.approved;
@@ -112,40 +113,6 @@ angular.module('myApp')
             else{$scope.updateDetail()}
         };
         $scope.editorContent = '';
-
-        $scope.companyObj____={
-                "company":{
-                    "id":58,
-                    "name":"修改盈泰财富云",
-                    "province":"1",
-                    "city":"1",
-                    "county":"1",
-                    "financing":2,
-                    "approved":1,
-                    "freezed":0,
-                    "logo":"http://carrots.ks3-cn-beijing.ksyun.com/3/f9b77ca3-4ee2-4b5f-84d6-7824b59bb73b.jpg",
-                    "slogan":"盈泰财富云，互联网+财富管理，中国三方财富管理行业最佳运营服务商，互联网产品有私募云App和云台系统",
-                    "totalNum":100,
-                    "summary":"北京",
-                    "phone":"",
-                    "address":"",
-                    "map":"",
-                    "mail":""
-                },
-                "productList":[{
-                    "name":"私募云",
-                    "slogan":"",
-                    "logo":"http://carrots.ks3-cn-beijing.ksyun.com/3/0053bac4-c84e-47e4-92e1-31f5ec1804e0.png",
-                    "summary":"私募云"
-                }],
-                "industryList":[{"industry":0},{"industry":5}],
-                "tagList":[{"tag":"技能培训"},{"tag":"岗位晋升"},{"tag":"年终分红"},{"tag":"股票期权"},{"tag":"扁平管理"},{"tag":"五险一金"},{"tag":"带薪年假"},{"tag":"弹性工作"},{"tag":"快速成长"}]
-            }
-
-
-
-
-
 
 
 

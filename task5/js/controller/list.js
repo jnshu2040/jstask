@@ -37,6 +37,7 @@ angular.module('myApp')
         };
         $scope.industry=$scope.approved=$scope.financing="";//初始化变量，可以没有
         $scope.search=function () {//搜索
+            console.info($scope);
             httpService.getList($scope.industry,$scope.approved,$scope.financing,"")
         };
         $scope.addNew=function(){$state.go("tab.addNew")};//添加，跳转
